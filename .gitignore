@@ -1,0 +1,4 @@
+# ignore following
+/node_modules
+/dist
+manifesto.json

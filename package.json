@@ -9,7 +9,7 @@
   },
   "repostitory": {
     "type": "git",
-    "url": "git+https://repo.west.com/mcarey1/rna-wireframe.git"
+    "url": "git+https://github.com/matthew-carey/rna-wireframe.git"
   },
   "keywords": [
     "RNA",
@@ -65,5 +65,5 @@
     "resolve-url-loader": "^3.1.1",
     "waypoints": "^4.0.1"
   },
-  "homepage": "https://repo.west.com/mcarey1/rna-wireframe#readme"
+  "homepage": "https://github.com/matthew-carey/rna-wireframe#readme"
 }

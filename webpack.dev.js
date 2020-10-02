@@ -113,18 +113,20 @@ module.exports = {
       chunkFilename: 'css/styles.css',
     }),
     new HtmlWebPackPlugin({
-      //title: 'Release Notes Administration',
       template: 'src/views/pages/index.handlebars',
+      templateParameters: require('./src/_data/strings.json'),
       minify: false,
       filename: 'index.html',
     }),
     new HtmlWebPackPlugin({
       template: 'src/views/pages/release.handlebars',
+      templateParameters: require('./src/_data/strings.json'),
       minify: false,
       filename: 'release.html',
     }),
     new HtmlWebPackPlugin({
       template: 'src/views/pages/item.handlebars',
+      templateParameters: require('./src/_data/strings.json'),
       minify: false,
       filename: 'item.html',
     }),

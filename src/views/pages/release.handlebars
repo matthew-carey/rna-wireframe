@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{nameApplication}} :: Create Release</title>
+    <title>{{nameApplication}} :: {{title_createRelease}}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- JS -->
@@ -15,31 +15,31 @@
   {{> ../partials/header }}
   <div id="mainContent" class="container-fluid py-3">
     <div class="col-md-11 align-self-center">
-      <h2>Create Release</h2>
+      <h2>{{title_createRelease}}</h2>
       <div class="row">
         <div class="col-lg-1">
-          <span class="badge badge__status--unpublished" id="releaseNoteStatus">Unpublished</span>
+          <span class="badge badge__status--{{lowercase badgeText_status.[1]}}" id="releaseNoteStatus">{{badgeText_status.[1]}}</span>
         </div>
         <div class="col-lg-4">
           <div class="row">
             <div class="form-group col-md-12">
-              <input type="text" placeholder="Title" name="title" class="form-control" />
+              <input type="text" placeholder="{{placeholder_title}}" name="title" class="form-control" />
             </div>
           </div>
           <div class="row">
             <div class="form-group col-md-6">
-              <input type="text" placeholder="Release Version" name="version" class="form-control" />
+              <input type="text" placeholder="{{placeholder_releaseVersion}}" name="version" class="form-control" />
             </div>
             <div class="form-group col-md-6">
               <div class="faButton">
-                <input type="date" placeholder="Release Date" name="date" class="form-control" /><i class="fa fa-calendar-alt"></i>
+                <input type="date" placeholder="{{placeholder_releaseDate}}" name="date" class="form-control" /><i class="fa fa-calendar-alt"></i>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-4">
           <div class="form-group">
-            <textarea name="description" placeholder="Description of release (optional)" class="form-control"></textarea>
+            <textarea name="description" placeholder="{{placeholder_releaseDescription}} {{placeholder_optional}}" class="form-control"></textarea>
           </div>
         </div>
         <div class="col-lg-2 text-right">
@@ -56,29 +56,24 @@
           </div>
           <br />
           <div class="faButton">
-            <button type="button" class="btn btn-outline-primary btn-block text-left btn__addTranslation">Add Translation</button><i class="fa fa-plus-circle"></i>
+            <button type="button" class="btn btn-outline-primary btn-block text-left btn__addTranslation">{{buttonText_addTranslation}}</button><i class="fa fa-plus-circle"></i>
           </div> 
         </div>
       </div>
 <br /><br />
   <div class="row">
     <div class="col-lg-11 text-right">
-      <a href="index.html" class="btn btn-secondary btn--caps">Cancel</a>
+      <a href="index.html" class="btn btn-secondary btn--caps">{{buttonText_cancel}}</a>
       
       <div class="btn-group">
-        <button type="button" class="btn btn-primary btn--caps">Save</button>
+        <button type="button" class="btn btn-primary btn--caps">{{buttonText_actions__release.[6]}}</button>
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
           <span class="caret"></span>
         </button>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Create</a>
-          <a class="dropdown-item" href="#">Update</a>
-          <a class="dropdown-item" href="#">Delete</a>
-          <a class="dropdown-item" href="#">Archive</a>
-          <a class="dropdown-item" href="#">Preview</a>
-          <a class="dropdown-item" href="#">Publish</a>
-          <a class="dropdown-item" href="#">Save</a>
-          <a class="dropdown-item" href="#">Un-publish</a>
+          {{#each buttonText_actions__release}}
+          <a class="dropdown-item" href="#">{{this}}</a>
+          {{/each}}
         </div>
       </div>
     </div>
@@ -87,7 +82,7 @@
   <br /><br />
   <div class="row">
     <div class="col-sm-11 text-right">
-      <a href="item.html" class="btn btn-outline-primary">Go to Release Note Screen <i class="fa fa-arrow-circle-right"></i></a>
+      <a href="item.html" class="btn btn-outline-primary">{{buttonText_goToReleaseNotes}} <i class="fa fa-arrow-circle-right"></i></a>
     </div>
   </div>
   <!-- End Remove This -->

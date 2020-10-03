@@ -6,14 +6,19 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const JSONMinifyPlugin = require('node-json-minify');
 
 module.exports = {
   module: {
     rules: [
       { 
         test: /\.handlebars$/, 
-        loader: "handlebars-loader" 
+        loader: "handlebars-loader",
+        options: {
+          precompileOptions: {
+            knownHelpersOnly: false,
+          },
+          helperDirs: path.join(__dirname, './src/views/helpers'),
+        } 
       },
       {
         test: /\.html$/,
@@ -116,15 +121,6 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        /*
-        { from: 'src/_data',
-          transform: function(content) {
-            // minify json
-            return JSONMinifyPlugin(content.toString());
-          },
-          to: ''
-        },
-        */
         { 
           from: './src/assets/minified',
           to: 'assets' 

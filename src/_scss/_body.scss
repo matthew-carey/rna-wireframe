@@ -240,6 +240,19 @@ table.dataTable > thead .sorting_desc_disabled::before {
     width: 100%;
     table-layout: fixed;
   }
+  @media screen and (max-width: 768px) { // Bootstrap's mobile view breakpoint
+    tbody{
+      display: inherit;
+      height: inherit;
+      max-height:inherit;
+      overflow: visible;
+    }
+    thead, tbody tr{
+      display: inherit;
+      width: inherit;
+      table-layout: inherit;
+    }
+  }
 }
 
 .row--lightBorderTop{

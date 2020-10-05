@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-lg-1 align-self-center">
-    <span class="badge badge__status--{{lowercase sampleReleaseNote_status}}" id="releaseNoteStatus">{{sampleReleaseNote_status}}</span>
+    <span class="badge badge__status--{{lowercase sampleReleaseNote.status}}" id="releaseNoteStatus">{{sampleReleaseNote.status}}</span>
   </div>
   <div class="col-lg-10">
     <h2 id="releaseNoteTitle">{{sampleReleaseNote.title}}</h2>
@@ -14,7 +14,7 @@
     <button type="button" class="btn btn-secondary btn--caps">{{buttonText_edit}}</button>
     
     <div class="btn-group">
-      <button type="button" class="btn btn-primary btn--caps">{{buttonText_save}}</button>
+      <button type="button" class="btn btn-primary btn--caps">{{sampleReleaseNote.buttonText_default}}</button>
       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
         <span class="caret"></span>
       </button>

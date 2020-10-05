@@ -1,10 +1,13 @@
 {
   "nameApplication": "My Awesome App",
   "languages": ["English","French","Spanish"],
+  "classification_release": ["New","Enhancement","Fix"],
+  "label_featuredChange": "Featured Change",
   "placeholder_title": "Title",
   "placeholder_releaseVersion": "Release Version",
   "placeholder_releaseDate": "Release Date",
   "placeholder_releaseDescription": "Description of Release",
+  "placeholder_changeDescription": "Description of Change",
   "placeholder_optional": "(optional)",
   "buttonText_addTranslation": "Add Translation",
   "buttonText_addRelease": "Add Release",
@@ -13,6 +16,7 @@
   "buttonText_cancel": "Cancel",
   "buttonText_edit": "Edit",
   "buttonText_save": "Save",
+  "buttonText_delete": "Delete",
   "buttonText_actions__release": ["Create","Update","Delete","Archive","Preview","Publish","Save","Un-publish"],
   "buttonText_actions__release2": ["Create","Update","Delete","Archive","Preview","Publish"],
   "badgeText_status": ["Published","Unpublished","Archived"],
@@ -44,11 +48,28 @@
       "buttonText_default": "View"
     }
   ],
-  "sampleReleaseNote":[{
+  "sampleReleaseNote":{
     "title": "Release Note Title",
     "version": "v.Something",
     "date": "25 December 2020",
     "status": "Unpublished",
-    "applications": ["Desktop Client","Home"]
-  }]
+    "applications": ["Desktop Client","Home"],
+    "buttonText_default": "Save"
+  },
+  "sampleReleaseCards":[
+    {
+      "type": "New",
+      "description": "This is the most glorious release ever.",
+      "title": "Neat New Feature",
+      "language": "English",
+      "applications": ["Desktop Client","Home"],
+      "applicationDefault": ["Desktop Client"],
+      "isFeatured":true
+    },
+    {
+      "applications": ["Desktop Client","Home"],
+      "applicationDefault": ["Desktop Client"],
+      "isFeatured":false
+    }
+  ]
 }

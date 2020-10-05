@@ -8,8 +8,11 @@
   "placeholder_optional": "(optional)",
   "buttonText_addTranslation": "Add Translation",
   "buttonText_addRelease": "Add Release",
+  "buttonText_addNote": "Add Note",
   "buttonText_goToReleaseNotes": "Go to Release Notes Screen",
   "buttonText_cancel": "Cancel",
+  "buttonText_edit": "Edit",
+  "buttonText_save": "Save",
   "buttonText_actions__release": ["Create","Update","Delete","Archive","Preview","Publish","Save","Un-publish"],
   "buttonText_actions__release2": ["Create","Update","Delete","Archive","Preview","Publish"],
   "badgeText_status": ["Published","Unpublished","Archived"],
@@ -40,5 +43,12 @@
       "applications": ["Home"],
       "buttonText_default": "View"
     }
-  ]
+  ],
+  "sampleReleaseNote":[{
+    "title": "Release Note Title",
+    "version": "v.Something",
+    "date": "25 December 2020",
+    "status": "Unpublished",
+    "applications": ["Desktop Client","Home"]
+  }]
 }

@@ -4,7 +4,7 @@ const webpack = require("webpack");
 const MinifyHtmlWebpackPlugin = require('minify-html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const ManifestPlugin = require('webpack-manifest-plugin');
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -116,8 +116,8 @@ module.exports = {
       minify: true,
       filename: 'item.html',
     }),
-    new ManifestPlugin({
-      fileName: '../manifesto.json',
+    new WebpackManifestPlugin({ 
+      fileName: '../manifesto.json', 
     }),
     new CopyWebpackPlugin({
       patterns: [

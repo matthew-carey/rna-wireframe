@@ -35,7 +35,7 @@
     "img-loader": "^4.0.0",
     "mini-css-extract-plugin": "^2.2.2",
     "minify-html-webpack-plugin": "^1.1.6",
-    "node-sass": "^6.0.1",
+    "node-sass": "^7.0.0",
     "normalize-scss": "^7.0.1",
     "postcss": "^8.1.0",
     "postcss-loader": "^6.1.1",
